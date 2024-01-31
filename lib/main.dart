@@ -34,9 +34,30 @@ class MyHomePage extends StatelessWidget {
         ],
       )),
       body: Center(
-        child: MUlogo(),
+        child: ListView(
+          children: <Widget>[
+            Product(),
+            Product(),
+            Product(),
+            Product(),
+          ],
+        ),
       ),
     );
+  }
+}
+
+class Product extends StatelessWidget {
+  const Product({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(children: [
+      Image.asset('assets/appimages/iphone.png'),
+      Text('iPhone 15')
+    ]);
   }
 }
 
